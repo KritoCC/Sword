@@ -1,1 +1,1 @@
-# Sword of Online
+# Sword Art Online
