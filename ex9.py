@@ -4,7 +4,7 @@
 # 这是一些新奇怪的东西，记得准确输入。
 
 days = "Mon Tue Wed Thu Fri Sat Sun"
-mouths = "\nJan \nFeb \nMar \nJun \nJul \nAug"
+mouths = "\nJan\nFeb \nMar \nJun \nJul \nAug"
 # 通过给字符串加上\n实现多行打印
 
 print("Here are the days: ", days)
