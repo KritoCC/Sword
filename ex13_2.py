@@ -4,6 +4,7 @@
 from sys import argv
 
 script, first, second, third, fourth = argv
+
 print("This script is called:", script)
 print("Your first variable is:", first)
 print("Your second variable is:", second)
