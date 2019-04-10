@@ -40,6 +40,19 @@ txt_again = open(file_again)
 print(txt_again.read())
 
 
+# 运行结果：
+# PS C:\Users\12409\AppData\Local\atom\file> python ex15.py ex15_sample.txt
+# Here's your file 'ex15_sample.txt':
+# This is stuff I type into a file.
+# It id really cool stuff.
+# Lots and lots of fun to have in here.
+# Type the filename again:
+# > ex15_sample.txt
+# This is stuff I type into a file.
+# It id really cool stuff.
+# Lots and lots of fun to have in here.
+
+# 解析：
 # 17-22行使用argv我们相对比较熟悉了。
 # 我们把open打开的文件赋值给变量txt
 # 接着我们在打印了一句话后，在28行我们在txt这个被open打开的file（“文件”类型）类型的
