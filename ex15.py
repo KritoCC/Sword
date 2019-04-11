@@ -90,13 +90,13 @@ print(txt_again.read())
 # file：文件名称；
 
 # mode:制定了文件打开的方式，函数提供了如下方式，其中，'rt'为默认方式。
-# 'r'       open for reading (default)——只读，默认方式
-# 'w'       open for writing, truncating the file first——写入，会覆盖源文件内容
-# 'x'       create a new file and open it for writing——创建新文件，并写入内容，如果文件已存在，将会报错：FileExistsError
-# 'a'       open for writing, appending to the end of the file if it exists——写入，如果文件有内容，则在末尾追加写入
-# 'b'       binary mode——二进制模式
-# 't'       text mode (default)——文本模式
-# '+'       open a disk file for updating (reading and writing)——更新磁盘文件，读写
+# 'r'       只读，默认方式
+# 'w'       写入，会覆盖源文件内容
+# 'x'       创建新文件，并写入内容，如果文件已存在，将会报错：FileExistsError
+# 'a'       写入，如果文件有内容，则在末尾追加写入
+# 'b'       二进制模式
+# 't'       文本模式
+# '+'       更新磁盘文件，读写
 # 'U'       universal newline mode (deprecated)——在paython3中已经弃用
 
 # buffering：用于设置缓存策略
