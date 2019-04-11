@@ -21,3 +21,6 @@ print(file_open.read())
 # To all the people out there.
 # I say I don't like my hair.
 # I need to shave it off.
+# To all the people out there.
+# I say I don't like my hair.
+# I need to shave it off.

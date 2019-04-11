@@ -49,6 +49,11 @@ target.write("\n")
 target.write(line3)
 target.write("\n")
 
+# 算法优化，试着用一个target.write()将line1、line2和line3打印出来，
+# 替换掉原来的6行代码
+n1 = "\n"
+target.write(line1 + n1 + line2 + n1 + line3 + n1)
+
 # 关闭文件，将文件写入硬盘
 print("And finally, we close it.")
 target.close()
@@ -67,4 +72,19 @@ target.close()
 # line2: I say I don't like my hair.
 # line3: I need to shave it off.
 # I'm going to write there to the file.
-# And finally, we close it.
+# And finally, we close it.、
+
+
+# open 为什么多了一个 w 参数
+# open() 的默认参数是 open(file, 'rt') 也就是读取文本的模式，
+# 默认参数可以不用填写。
+# 而本题练习是写入文件，因此不适应使用 r 参数，
+# 需要指定写入模式，因此需要增加 w 参数。
+
+
+# 如果在'w'模式打开文件，那么我们还需不需要 target.truncate()?
+# truncate()的作用是将文件截断指定 size 字节
+# 本习题中没有指定truncate()的大小，所以实际上是清空了文件的内容
+# 'w'打开一个文件只用于写入。
+# 如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。
+# 所以不需要target.truncate()也可以
