@@ -17,8 +17,9 @@ print("This is package_name.__init__.py")
 # 就会因为找不到hello模块的位置，导致出错。
 
 # 错误总结3
-# 不能写成from . import hello
+# 写成from . import hello会报错
 # 因为不能在包的内部直接执行
+# 但是在module_test03.py中导入package_name包的时候却能执行
 # 我们可以在package_name包同级目录下module_test03.py测试看看效果
 # from package_name import hello
 # 可以达到效果
