@@ -33,4 +33,5 @@ print("We need to put about", average_passengers_per_car, "in each car.")
 # Traceback (most recent call last):
 #  File "ex4.py", line 8, in <module>    告诉我们错误发生的位置在“ex4.py”文件的第8行。
 #   average_passengers_per_car = car_pool_capacity / passenger   列出了错误行的内容
-# NameError: name 'car_pool_capacity' is not defined   告诉我们错误类型是 NameError 变量名 car_pool_capacity 未被定义
+# NameError: name 'car_pool_capacity' is not defined
+# 告诉我们错误类型是 NameError 变量名 car_pool_capacity 未被定义
