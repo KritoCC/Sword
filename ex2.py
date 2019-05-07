@@ -1,7 +1,5 @@
 # 习题二
 
-# '#'的英文为octothorpe或者pound character
-
 # A comment, this is so you can read your program later
 # Anything after the # is ignored by python.
 
