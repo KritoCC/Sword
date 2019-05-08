@@ -56,6 +56,21 @@ print_a_line(current_line, current_file)
 current_line += 1
 print_a_line(current_line, current_file)
 
+# 运行结果：
+# PS C:\Users\12409\AppData\Roaming\Atom\file> python ex20.py ex20_test.txt
+# First let's print the whole file:
+
+# This is line 1
+# This is line 2
+# This is line 3
+
+# Now let's rewind, kind of like a tape.
+# Let's print three lines:
+# 1 This is line 1
+
+# 2 This is line 2
+
+# 3 This is line 3
 
 # current_line 是怎么变成line_count的
 # 其实line_count要叫做位置参数，之所以调用时的参数current_line成为了函数定义时的line_count
