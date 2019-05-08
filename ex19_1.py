@@ -41,4 +41,4 @@ download_time(bandwidth_Mbit_2, size_GByte_2)
 script, bandwidth_Mbit_3, size_GByte_3 = argv
 download_time(int(bandwidth_Mbit_3), int(size_GByte_3))
 
-# 上述方法进行结从而可以产生更多运行方式
+# 上述方法进行结合可以产生更多运行方式
