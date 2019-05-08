@@ -72,7 +72,7 @@ target.close()
 # line2: I say I don't like my hair.
 # line3: I need to shave it off.
 # I'm going to write there to the file.
-# And finally, we close it.、
+# And finally, we close it.
 
 
 # open 为什么多了一个 w 参数
@@ -102,3 +102,40 @@ target.close()
 #       文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。
 # ab+	以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。
 #       如果该文件不存在，创建新文件用于读写。
+
+
+# seek()函数是Python中操作文件游标移动操作的函数
+# 用法如下:
+# seek(offset,whence=0)
+# offset：开始的偏移量，也就是代表需要移动偏移的字节数
+# whence：给offset参数一个定义，表示要从哪个位置开始偏移；
+# 0代表从文件开头开始算起，1代表从当前位置开始算起，2代表从文件末尾算起。
+
+# 在使用seek（）函数时，有时候会报错为
+# “io.UnsupportedOperation: can't do nonzero cur-relative seeks”
+# 代码如下：
+
+# >>> f=open("ex16_test.txt","r+")    #以读写的格式打开文件ex16_test.txt
+# >>> f.read()    #读取文件内容
+# ' To all the people out there.
+# I say I don't like my hair.
+# I need to shave it off.
+# To all the people out there.
+# I say I don't like my hair.
+# I need to shave it off.'
+# >>> f.seek(3,0)       #从开头开始偏移三个单位（偏移到“n”）
+# 3
+# >>> f.seek(5,1)     #想要从上一次偏移到的位置（即“n”）再偏移5个单位
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# io.UnsupportedOperation: can't do nonzero cur-relative seeks
+
+# 照理说，按照seek()方法的格式file.seek(offset,whence)，后面的1代表从当前位置开始算起进行偏移，那又为什么报错呢？
+# 这是因为，在文本文件中，没有使用b模式选项打开的文件，只允许从文件头开始计算相对位置，从文件尾计算时就会引发异常。
+# 将  f=open("ex16_test.txt","r+")  改成 f = open("ex16_test.txt","rb")   就可以了.
+# 改正后的代码如下：
+# >>> f = open("ex16_test.txt","rb")
+# >>> f.seek(3,0)
+# 3
+# >>> f.seek(5,1)
+# 8
