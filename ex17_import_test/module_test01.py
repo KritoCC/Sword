@@ -2,7 +2,7 @@
 
 import module_name
 
-print("This is module_tset01.py")
+print("This is module_test01.py")
 # python的type函数有两个用法，当只有一个参数的时候，返回对象的类型。
 # 当有三个参数的时候返回一个类对象。
 print(type(module_name))
