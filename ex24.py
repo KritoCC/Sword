@@ -36,9 +36,11 @@ print("With a starting point of: {}".format(start_point))
 # it's just like with an f"" string
 print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
 
-strat_point = start_point / 10
+start_point = start_point / 10
 
 print("We can also do that this way:")
 formula = secret_formula(start_point)
 # this is an easy way to apply a list to a format string
 print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+# *formula代表的是元组
+# 对于.format()不太了解的可以去看ex6_1.py
