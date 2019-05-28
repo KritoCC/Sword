@@ -1,3 +1,5 @@
+# 习题二十六未修改版
+
 print("How old are you?", end=' ')
 age = input()
 print("How tall are you?", end=' ')
