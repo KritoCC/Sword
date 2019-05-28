@@ -37,9 +37,26 @@ def break_words(stuff):
     This function will break up words for us.
     这个函数会为我们拆分出单词
     """
+    words = stuff.split('')
+    return words
 
+
+def sort_words(words):
+    """
+    Sorts the words.
+    对单词进行排序
+    """
+    return sorted(words)
+
+
+def print_first_word(words):
+    """
+    Prints the first word after popping it off.
+    抛出第一个单词并打印
+    """
 # split() 通过指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串
 # split() 方法语法：
+
 
 # str.split(str="", num=string.count(str))
 # 参数说明：
@@ -91,7 +108,7 @@ sorted({1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'})
 # 结果为：[1, 2, 3, 4, 5]
 # 利用key进行倒序排列
 example_list = [5, 0, 6, 1, 2, 7, 3, 4]
-result_list = sorted(example_list, key=lambda x: x*-1)
+result_list = sorted(example_list, key=lambda x: x * -1)
 print(result_list)
 # 结果为：[7, 6, 5, 4, 3, 2, 1, 0]
 # 要进行反向排序，也通过传入第三个参数reverse=True：
@@ -102,7 +119,7 @@ sorted(example_list, reverse=True)
 
 C = [('e', 4, 2), ('a', 2, 1), ('c', 5, 4), ('b', 3, 3), ('d', 1, 5)]
 print(sorted(C, key=lambda y: y[0]))
-print(sorted(C, key=lambda x: x[1]*-1))
+print(sorted(C, key=lambda x: x[1] * -1))
 print(sorted(C, key=lambda x: x[2]))
 # 结果为：
 # [('a', 2, 1), ('b', 3, 3), ('c', 5, 4), ('d', 1, 5), ('e', 4, 2)]
