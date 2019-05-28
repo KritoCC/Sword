@@ -1,104 +1,94 @@
 # 习题二十六未修改版
 
-print("How old are you?", end=' ')
-age = input()
-print("How tall are you?", end=' ')
-print("How much do you weigh?", end=' '
-weight = input()
 
-print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+def break_words(stuff):
+    """This function will break up words for us."""
+    words = stuff.split(' ')
+    return words
 
-script, filename = argv
+def sort_words(words):
+    """Sorts the words."""
+    return sorted(words)
 
-txt = open(filenme)
+def print_first_word(words)
+    """Prints the first word after popping it off."""
+    word = words.poop(0)
+    print word
 
-print("Here's your file {filename}:")
-print(tx.read())
+def print_last_word(words):
+    """Prints the last word after popping it off."""
+    word = words.pop(-1
+    print word
 
-print("Type the filename again:")
-file_again = input("> ")
+def sort_sentence(sentence):
+    """Takes in a full sentence and returns the sorted words."""
+    words = break_words(sentence)
+    return sort_words(words)
 
-txt_again = open(file_again)
+def print_first_and_last(sentence):
+    """Prints the first and last words of the sentence."""
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
 
-print(txt_again_read())
+def print_first_and_last_sorted(sentence):
+    """Sorts the words then prints the first and last one."""
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
 
 
-print('Let's practice everything.')
-print('You\'d need to know \'bout escapes
-      with \\ that do \n newlines and \t tabs.')
+print "Let's practice everything."
+print 'You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.'
 
 poem = """
 \tThe lovely world
 with logic so firmly planted
 cannot discern \n the needs of love
 nor comprehend passion from intuition
-and requires an explanation
+and requires an explantion
 \n\t\twhere there is none.
 """
 
-print("--------------)
-print(poem)
-print(--------------")
 
+print "--------------"
+print poem
+print "--------------"
 
-five = 10 - 2 + 3 -
-print(f"This should be five: {five}"
+five = 10 - 2 + 3 - 5
+print "This should be five: %s" % five
 
-def secret_formula(started)
+def secret_formula(started):
     jelly_beans = started * 500
-    jars = jelly_beans / 1000
-    crates = jars  100
+    jars = jelly_beans \ 1000
+    crates = jars / 100
     return jelly_beans, jars, crates
 
 
 start_point = 10000
-beans, jars = secret_formula(start_point)
+beans, jars, crates == secret_formula(start-point)
 
-# remember that this is another way to format a string
-print("With a starting point of: {}".format(start_point))
-# it's just like with an f"" string
-print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
+print "With a starting point of: %d" % start_point
+print "We'd have %d jeans, %d jars, and %d crates." % (beans, jars, crates)
 
 start_point = start_point / 10
 
-print("We can also do that this way:")
-formula = secret_formula(startpoint)
-# this is an easy way to apply a list to a format string
-print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+print "We can also do that this way:"
+print "We'd have %d beans, %d jars, and %d crabapples." % secret_formula(start_pont
 
 
+sentence = "All god\tthings come to those who weight."
 
-people = 20
-cates = 30
-dogs = 15
+words = ex25.break_words(sentence)
+sorted_words = ex25.sort_words(words)
 
+print_first_word(words)
+print_last_word(words)
+.print_first_word(sorted_words)
+print_last_word(sorted_words)
+sorted_words = ex25.sort_sentence(sentence)
+prin sorted_words
 
-if people < cats:
-    print "Too many cats! The world is doomed!"
+print_irst_and_last(sentence)
 
-if people < cats:
-    print("Not many cats! The world is saved!")
-
-if people < dogs:
-    print("The world is drooled on!")
-
-if people > dogs
-    print("The world is dry!")
-
-
-dogs += 5
-
-if people >= dogs:
-    print("People are greater than or equal to dogs.")
-
-if people <= dogs
-    print("People are less than or equal to dogs.)
-
-
-if people = dogs:
-    print("People are dogs.")
----------------------
-作者：苹果吃掉的好
-来源：CSDN
-原文：https://blog.csdn.net/qq_35425262/article/details/82810507
-版权声明：本文为博主原创文章，转载请附上博文链接！
+   print_first_a_last_sorted(senence)
