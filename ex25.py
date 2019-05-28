@@ -37,7 +37,7 @@ def break_words(stuff):
     This function will break up words for us.
     这个函数会为我们拆分出单词
     """
-    words = stuff.split('')
+    words = stuff.split(' ')
     return words
 
 
@@ -54,9 +54,134 @@ def print_first_word(words):
     Prints the first word after popping it off.
     抛出第一个单词并打印
     """
+    word = words.pop(0)
+    print(word)
+
+
+def print_last_word(words):
+    """
+    Prints the last word after popping it off.
+    抛出最后一个单词并打印
+    """
+    word = words.pop(-1)
+    print(word)
+
+
+def sort_sentence(sentence):
+    """
+    Takes in a full sentence and returns the sorts words.
+    输入完整的句子，并返回排序后的单词
+    """
+    words = break_words(sentence)
+    return sort_words(words)
+
+
+def print_first_and_last(sentence):
+    """
+    Prints the first and last words of the sentence.
+    打印句子的第一个和最后一个单词
+    """
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+
+def print_first_and_last_sorted(sentence):
+    """
+    Sorts the words then prints the first and last one.
+    打印排序后的句子的第一个和最后一个单词
+    """
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+
+# 运行结果（这里使用了 ipython 这个增强型的 python 命令行）：
+# PS C:\Users\12409\AppData\Roaming\Atom\file> ipython
+# Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)]
+# Type 'copyright', 'credits' or 'license' for more information
+# IPython 7.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+# In [1]: import ex25
+# ['This', 'is', 'string', 'example....wow!!!']
+# ['Th', 's is string example....wow!!!']
+# ['Th', 's ', 's str', 'ng example....wow!!!']
+# ['This is string example....', 'o', '!!!']
+# [1, 2, 3, 4, 5]
+# [7, 6, 5, 4, 3, 2, 1, 0]
+# [('a', 2, 1), ('b', 3, 3), ('c', 5, 4), ('d', 1, 5), ('e', 4, 2)]
+# [('c', 5, 4), ('e', 4, 2), ('b', 3, 3), ('a', 2, 1), ('d', 1, 5)]
+# [('a', 2, 1), ('e', 4, 2), ('b', 3, 3), ('c', 5, 4), ('d', 1, 5)]
+# 列表删除的项为： Taobao
+# 列表现在为： ['Google', 'Runoob']
+
+# In [2]: sentence = "All good things come to those who wait."
+
+# In [3]: words = ex25.break_words(sentence)
+
+# In [4]: words
+# Out[4]: ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+
+# In [5]: sorted_words = ex25.sort_words(words)
+
+# In [6]: sorted_words
+# Out[6]: ['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+
+# In [7]: ex25.print_first_word(words)
+# All
+
+# In [8]: ex25.print_last_word(words)
+# wait.
+
+# In [9]: words
+# Out[9]: ['good', 'things', 'come', 'to', 'those', 'who']
+
+# In [10]: ex25.print_first_word(sorted_words)
+# All
+
+# In [11]: ex25.print_last_word(sorted_words)
+# who
+
+# In [12]: sorted_words
+# Out[12]: ['come', 'good', 'things', 'those', 'to', 'wait.']
+
+# In [13]: sorted_words = ex25.sort_sentence(sentence)
+
+# In [14]: sorted_words
+# Out[14]: ['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+
+# In [15]: ex25.print_first_and_last(sentence)
+# All
+# wait.
+
+# In [16]: ex25.print_first_and_last_sorted(sentence)
+# All
+# who
+
+# In [17]: quit()
+
+# 分析：
+# 下面说的行以 ipython 的行号为准，输入输出使用一个行号。
+# 第 1 行：import ex25 这里把我们刚刚写的脚本进行了引入，这和我们之前练习中引入库（模组、模块）的时候一样，
+#         你也一定注意到了，我们引入的时候并不需要写后缀名 .py（后面跟的输出量是新知识点演示实例的输出结果）
+# 第 2 行：我们把一句话装入了变量 sentence
+# 第 3 行：调用了函数 ex25.break_words 。
+#         其中 . 符号告诉 python ：“嗨，我要运行 ex25 里的那个叫做 break_words 的函数。
+# 第 4 行：我们输出了 words 变量的内容（这个方法只在命令行模式有用）。
+#         而在它的输出中我们看到的中括号 [] 的部分叫做列表（list)，我们在后面的练习会正式认识到它。
+# 第 5-6 行：使用了 ex25.sort_words 得到了一个单词被排序后的句子sorted_words。
+# 第 7-8 行：使用了ex25.print_first_word 和 ex25.print_last_word 将第一个和最后一个词打印出来。
+# 第 9 行：再次输出 words 的内容，可以发现之前的首尾的单词都不见了（详见下文）
+# 第 10-11 行 把排序句子的首尾单词打印出来
+# 第 12 行：和第 9 行类似，打印出来发现首尾单词后它们也消失了
+# 第 13-14 行 我们用了另一个方法 ex25.sort_sentence ，使用一个函数重新获取了排序句子。
+# 第 15-16行：一样是一个函数，我们就分别得到了两种排序的首位单词。
+# 第 17 行：quit()是在命令行中退出ipython的命令
+
+
+# 新知识详细讲解
 # split() 通过指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串
 # split() 方法语法：
-
 
 # str.split(str="", num=string.count(str))
 # 参数说明：
