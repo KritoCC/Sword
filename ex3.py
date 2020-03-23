@@ -1,3 +1,5 @@
+# coding=utf-8
+
 # 习题三
 print("I will now count my chickens:")  # 我现在数一数我的鸡：
 

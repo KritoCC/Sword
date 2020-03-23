@@ -1,3 +1,5 @@
+# coding=utf-8
+
 # 习题一
 
 print("Hello Again")

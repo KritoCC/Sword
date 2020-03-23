@@ -1,3 +1,5 @@
+# coding=utf-8
+
 # 习题二
 
 # '#'的英文为octothorpe或者pound character
